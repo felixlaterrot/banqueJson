@@ -99,7 +99,8 @@ public class Main {
                                 Scanner sc5 = new Scanner(System.in);
                                 System.out.println("Combien voulez-vous mettre");
                                 int crediter = sc5.nextInt();
-                                compte.crediterCompte(crediter);mapper.writeValue(new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\SerializableObjetJson.json"), banqueDeserializable);
+                                compte.crediterCompte(crediter);
+                                mapper.writeValue(new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\SerializableObjetJson.json"), banqueDeserializable);
                                 break;
                         }
                         break;

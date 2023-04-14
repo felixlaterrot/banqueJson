@@ -8,7 +8,7 @@ public class CalculWord {
         Scanner sc = new Scanner(System.in);
         System.out.println("Veuillez saisir une phrase :");
         String str = sc.nextLine();
-        int nb = str.split(" ").length;
+        int nb = str.split("[\\s']+").length;
         System.out.println("Vous avez saisi : " + nb + " mots");
     }
 }

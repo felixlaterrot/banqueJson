@@ -83,7 +83,8 @@ public class Main {
                         afficherCompte(compte);
 
                         Scanner sc3 = new Scanner(System.in);
-                        System.out.println("Retirer de l'argent : 1");
+                        System.out.println("Retirer de l'argent : 1\n" +
+                                "Créditer compte : 2");
                         int choixCompte = sc3.nextInt();
 
                         switch (choixCompte){
@@ -92,6 +93,14 @@ public class Main {
                                 System.out.println("Combien voulez-vous retirer");
                                 int valeur = sc4.nextInt();
                                 compte.retirerArgent(valeur);
+                                mapper.writeValue(new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\SerializableObjetJson.json"), banqueDeserializable);
+                                break;
+                            case 2:
+                                Scanner sc5 = new Scanner(System.in);
+                                System.out.println("Combien voulez-vous mettre");
+                                int crediter = sc5.nextInt();
+                                compte.crediterCompte(crediter);mapper.writeValue(new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\SerializableObjetJson.json"), banqueDeserializable);
+                                break;
                         }
                         break;
                     case 4:

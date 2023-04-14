@@ -46,4 +46,8 @@ public class CompteBancaire implements Serializable {
             System.out.println("Fond non disponible");
         }
     }
+    public void crediterCompte(int fond){
+        fondDisponible += fond;
+        System.out.println("Argent envoyé");
+    }
 }

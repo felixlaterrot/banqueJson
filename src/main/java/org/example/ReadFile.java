@@ -8,20 +8,6 @@ import java.util.Scanner;
 
 public class ReadFile {
     public static void main(String[] args) throws IOException {
-
-        //try {
-        //
-        //    // Recevoir le fichier
-        //    //File f = new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\Essaie.txt");
-        //    FileOutputStream fos = new FileOutputStream("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\Essaie.txt");
-        //    //f.setWritable(str);
-        //    fos.write(str.getBytes());
-        //}
-        //catch (Exception e) {
-        //    System.err.println(e);
-        //}
-
-
         //"C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\Essaie2.txt"
         try
         {

@@ -128,4 +128,15 @@ public class Banque implements Serializable {
         }
         return null;
     }
+
+    public void deleteCompte(CompteBancaire compteBancaire){
+        comptes.remove(compteBancaire);
+    }
+
+    public void afficherComptes(){
+        for(CompteBancaire compte : comptes){
+            System.out.println("numero" + compte.getNumCompteBancaire());
+            System.out.println("nom Client" + compte.getClient().getNom());
+        }
+    }
 }

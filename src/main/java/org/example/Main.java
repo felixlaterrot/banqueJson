@@ -39,8 +39,8 @@ public class Main {
         banque.ajoutCompte(compte3);
         banque.ajoutCompte(compte4);
         banque.ajoutCompte(compte5);
-*/
-/*
+
+
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\SerializableObjetJson.json"), banque);
 */
@@ -84,7 +84,8 @@ public class Main {
 
                         Scanner sc3 = new Scanner(System.in);
                         System.out.println("Retirer de l'argent : 1\n" +
-                                "Créditer compte : 2");
+                                "Créditer compte : 2\n" +
+                                "Supprimer compte : 3");
                         int choixCompte = sc3.nextInt();
 
                         switch (choixCompte){
@@ -102,6 +103,11 @@ public class Main {
                                 compte.crediterCompte(crediter);
                                 mapper.writeValue(new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\SerializableObjetJson.json"), banqueDeserializable);
                                 break;
+                            case 3:
+                                CompteBancaire compteBancaire = banqueDeserializable.findCompteByNum(choixCompte);
+                                banqueDeserializable.deleteCompte(compteBancaire);
+                                mapper.writeValue(new File("C:\\Users\\felix\\Documents\\IPI\\JAVA_POO\\SerializableObjetJson.json"), banqueDeserializable);
+                                break;
                         }
                         break;
                     case 4:
@@ -116,6 +122,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
+
 
 
         /*ObjectMapper objectMapper = new ObjectMapper();
